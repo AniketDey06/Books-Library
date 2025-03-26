@@ -1,0 +1,275 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    /* border: 2px solid rgb(189, 0, 0); */
+}
+
+.githublink{
+    position:absolute ;
+    top: 15px;
+    right: 15px;
+}
+
+.githublink i{
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+}
+
+
+.navbar {
+    /* border: 2px solid rgb(0, 0, 0); */
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchfilter {
+    width: 18%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.listarea {
+    background: #E8E8E8;
+    padding: 10px 20px;
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    min-height: 80vh;
+}
+
+.heading {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.heading h1 {
+    font-size: 25px;
+    border-bottom: 2px solid black;
+}
+
+.listingtypes {
+    height: 100%;
+    width: 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.listingtypes i {
+    font-size: 25px;
+}
+
+.pagecount {
+    /* padding-top: 10px; */
+    /* position: absolute; */
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagedivs{
+    display: flex;
+}
+
+.bookslistings {
+    margin-top: 10px;
+    width: 90%;
+    
+}
+
+.gridview{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.listview{
+    display: flex;
+    flex-direction: column;
+    /* align-items: start; */
+    gap: 10px;
+}
+
+.grid{
+    width: 240px;
+    height: 400px;
+}
+
+.list{
+    width: 70%;
+    /* height: 350px; */
+
+}
+
+.list a{
+    display: flex;
+}
+
+.list .text{
+    margin-left: 40px;
+}
+
+.hide{
+    display: none;
+}
+
+/* .list .text .title{
+    
+} */
+/* From Uiverse.io by alexmaracinaru */
+.card {
+    
+    background: white;
+    padding: .4em;
+    border-radius: 6px;
+    /* display: flex; */
+}
+
+.card-image {
+    /* background-color: rgb(236, 236, 236); */
+    /* background-image: url(https://books.google.com/books/content?id=KA9QDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api);
+    background-size: cover;
+    background-position: center center; */
+    /* width: 100%; */
+    /* height: 130px; */
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+img{
+    min-height: 160px;
+    max-height: 160px;
+    height: auto;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.card-image:hover {
+    transform: scale(0.98);
+}
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.7em;
+    font-weight: 600;
+    color: rgb(63, 121, 230);
+    padding: 10px 7px 0;
+}
+
+.category:hover {
+    cursor: pointer;
+}
+
+.title {
+    font-weight: 600;
+    color: rgb(14, 14, 14);
+    padding: 7px;
+}
+
+.heading:hover {
+    cursor: pointer;
+}
+
+.author{
+    color: rgb(58, 56, 56);
+    max-height: 60px;
+    font-size: 14px;
+    font-weight: 500;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.publisherdata {
+    color: rgb(70, 69, 69);
+    font-weight: 500;
+    font-size: 13px;
+    padding-top: 5px;
+}
+
+.name {
+    font-weight: 600;
+    /* white-space: nowrap; */
+    
+    text-overflow: ellipsis;
+}
+
+.name:hover {
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .searchfilter {
+        width: 80%;
+    }
+    .bookslistings {
+        margin-top: 10px;
+        width: 110%;
+        
+    }
+    .heading {
+        justify-content: space-between;
+    }
+    
+    .listingtypes{
+        width: 120px;
+    }
+    .pagebtns{
+        margin: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+    }
+    .pagebtns button{
+        border-radius: 4px;
+    }
+    .pagedivs{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .list{
+        width: 90%;
+        /* height: 350px; */
+    
+    }
+
+    .list .text{
+        width: 60%;
+        margin-left: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .list img{
+        min-height: 100%;
+        /* min-width: auto; */
+        aspect-ratio: auto;;
+    }
+    
+}
