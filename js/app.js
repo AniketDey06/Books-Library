@@ -71,17 +71,27 @@ function displayBooks(booksdata) {
 }
 
 // Function to display pagination buttons
-function displayPageCount(pageCount) {
+function displayPageCount(pageCount,pagenum) {
     pages.innerHTML = '';
     for (let i = 1; i <= pageCount; i++) {
         const li = document.createElement('li');
-        li.innerHTML = 
-        `<li>
-            <button href="#" aria-current="page" id=""
-                class="navbutton flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 .:bg-gray-800 .:border-gray-700 .:text-gray-400 .:hover:bg-gray-700 .:hover:text-white">
-                    ${i}
-            </button>
-        </li>`;
+        if(pagenum==i){
+            li.innerHTML = 
+            `<li>
+                <button href="#" aria-current="page" id=""
+                    class="navbutton flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-blue-100 border border-gray-300 hover:bg-gray-100 hover:text-gray-700 .:bg-gray-800 .:border-gray-700 .:text-gray-400 .:hover:bg-gray-700 .:hover:text-white">
+                        ${i}
+                </button>
+            </li>`;
+        }else{
+            li.innerHTML = 
+            `<li>
+                <button href="#" aria-current="page" id=""
+                    class="navbutton flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 .:bg-gray-800 .:border-gray-700 .:text-gray-400 .:hover:bg-gray-700 .:hover:text-white">
+                        ${i}
+                </button>
+            </li>`;
+        }
         pages.appendChild(li);
     }
     
@@ -104,7 +114,7 @@ function organizeData(obj) {
     booksdata = obj.data.data;
     displayBooks(booksdata);
     totalPages = obj.data.totalPages;
-    displayPageCount(totalPages);
+    displayPageCount(totalPages,pagenum);
 }
 
 // Fetch books data from API
@@ -150,6 +160,7 @@ prevbtn.addEventListener('click', () => {
     if (pagenum > 1) {
         pagenum--;
         fetchBooksData(pagenum);
+        // displayPageCount(totalPages,pagenum);
     }
 });
 
@@ -157,6 +168,7 @@ nextbtn.addEventListener('click', () => {
     if (pagenum < totalPages) {
         pagenum++;
         fetchBooksData(pagenum);
+        // displayPageCount(totalPages,pagenum);
     }
 });
 
