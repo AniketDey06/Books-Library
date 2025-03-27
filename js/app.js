@@ -79,7 +79,7 @@ function displayPageCount(pageCount,pagenum) {
             li.innerHTML = 
             `<li>
                 <button href="#" aria-current="page" id=""
-                    class="navbutton flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-blue-100 border border-gray-300 hover:bg-gray-100 hover:text-gray-700 .:bg-gray-800 .:border-gray-700 .:text-gray-400 .:hover:bg-gray-700 .:hover:text-white">
+                    class="navbutton flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-blue-100 border border-gray-300 hover:bg-blue-200 hover:text-gray-700 ">
                         ${i}
                 </button>
             </li>`;
@@ -87,7 +87,7 @@ function displayPageCount(pageCount,pagenum) {
             li.innerHTML = 
             `<li>
                 <button href="#" aria-current="page" id=""
-                    class="navbutton flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 .:bg-gray-800 .:border-gray-700 .:text-gray-400 .:hover:bg-gray-700 .:hover:text-white">
+                    class="navbutton flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700">
                         ${i}
                 </button>
             </li>`;
